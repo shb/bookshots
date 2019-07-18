@@ -1,0 +1,172 @@
+{
+  "imPoorReport": true,
+  "numFailedTestSuites": 1,
+  "numFailedTests": 2,
+  "numPassedTestSuites": 0,
+  "numPassedTests": 37,
+  "numPendingTestSuites": 0,
+  "numPendingTests": 0,
+  "numRuntimeErrorTestSuites": 0,
+  "numTodoTests": 0,
+  "numTotalTestSuites": 1,
+  "numTotalTests": 39,
+  "openHandles": [],
+  "snapshot": {
+    "added": 0,
+    "didUpdate": false,
+    "failure": true,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesUnmatched": 1,
+    "filesUpdated": 0,
+    "matched": 37,
+    "total": 39,
+    "unchecked": 0,
+    "uncheckedKeysByFile": [],
+    "unmatched": 2,
+    "updated": 0
+  },
+  "startTime": 1559228471678,
+  "success": false,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "Storyshots",
+            "Badge"
+          ],
+          "failureMessages": [],
+          "fullName": "Storyshots Badge Simple",
+          "location": null,
+          "status": "passed",
+          "title": "Simple"
+        },
+        {
+          "ancestorTitles": [
+            "Storyshots",
+            "Date & Time"
+          ],
+          "failureMessages": [],
+          "fullName": "Storyshots Date & Time Date Picker",
+          "location": null,
+          "status": "passed",
+          "title": "Date Picker"
+        },
+        {
+          "ancestorTitles": [
+            "Storyshots",
+            "Radio button"
+          ],
+          "failureMessages": [],
+          "fullName": "Storyshots Radio button Simple",
+          "location": null,
+          "status": "passed",
+          "title": "Simple"
+        },
+        {
+          "ancestorTitles": [
+            "Storyshots",
+            "Timeline"
+          ],
+          "failureMessages": [
+            "Error: expect(received).toMatchSnapshot()\n\nSnapshot name: `Storyshots Timeline Regular 1`\n\n- Snapshot\n+ Received\n\n@@ -75,11 +75,11 @@\n            </span>\n            <span\n              className=\"StyledText-sc-1sadyjn-0 fIdPKo\"\n              size=\"small\"\n            >\n-             2019, May 27th\n+             2019, May 30th\n            </span>\n          </div>\n          <div\n            className=\"StyledBox-sc-13pk1d4-0 dgXxAY\"\n          >\n@@ -91,11 +91,11 @@\n            </span>\n            <span\n              className=\"StyledText-sc-1sadyjn-0 fIdPKo\"\n              size=\"small\"\n            >\n-             2019, Jun 16th\n+             2019, Jun 19th\n            </span>\n          </div>\n        </div>\n        <div\n          className=\"StyledBox-sc-13pk1d4-0 ghoNDp\"\n@@ -110,11 +110,11 @@\n          </span>\n          <span\n            className=\"StyledText-sc-1sadyjn-0 fIdPKo\"\n            size=\"small\"\n          >\n-           2019, Jul 1st\n+           2019, Jul 4th\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n    at match (/Users/scociancich/Development/Experience/design-system/node_modules/@storybook/addon-storyshots/dist/test-bodies.js:27:20)\n    at /Users/scociancich/Development/Experience/design-system/node_modules/@storybook/addon-storyshots/dist/test-bodies.js:39:10\n    at Object.<anonymous> (/Users/scociancich/Development/Experience/design-system/node_modules/@storybook/addon-storyshots/dist/api/snapshotsTestsTemplate.js:35:33)\n    at Object.asyncJestTest (/Users/scociancich/Development/Experience/design-system/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)\n    at resolve (/Users/scociancich/Development/Experience/design-system/node_modules/jest-jasmine2/build/queueRunner.js:43:12)\n    at new Promise (<anonymous>)\n    at mapper (/Users/scociancich/Development/Experience/design-system/node_modules/jest-jasmine2/build/queueRunner.js:26:19)\n    at promise.then (/Users/scociancich/Development/Experience/design-system/node_modules/jest-jasmine2/build/queueRunner.js:73:41)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:189:7)"
+          ],
+          "fullName": "Storyshots Timeline Regular",
+          "location": null,
+          "status": "failed",
+          "title": "Regular"
+        },
+        {
+          "ancestorTitles": [
+            "Storyshots",
+            "Timeline"
+          ],
+          "failureMessages": [
+            "Error: expect(received).toMatchSnapshot()\n\nSnapshot name: `Storyshots Timeline Short 1`\n\n- Snapshot\n+ Received\n\n@@ -75,11 +75,11 @@\n            </span>\n            <span\n              className=\"StyledText-sc-1sadyjn-0 fHdEHk\"\n              size=\"xsmall\"\n            >\n-             05/27/19\n+             05/30/19\n            </span>\n          </div>\n          <div\n            className=\"StyledBox-sc-13pk1d4-0 dgXxAY\"\n          >\n@@ -91,11 +91,11 @@\n            </span>\n            <span\n              className=\"StyledText-sc-1sadyjn-0 fHdEHk\"\n              size=\"xsmall\"\n            >\n-             06/16/19\n+             06/19/19\n            </span>\n          </div>\n        </div>\n        <div\n          className=\"StyledBox-sc-13pk1d4-0 ghoNDp\"\n@@ -109,11 +109,11 @@\n          </span>\n          <span\n            className=\"StyledText-sc-1sadyjn-0 fHdEHk\"\n            size=\"xsmall\"\n          >\n-           07/01/19\n+           07/04/19\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n    at match (/Users/scociancich/Development/Experience/design-system/node_modules/@storybook/addon-storyshots/dist/test-bodies.js:27:20)\n    at /Users/scociancich/Development/Experience/design-system/node_modules/@storybook/addon-storyshots/dist/test-bodies.js:39:10\n    at Object.<anonymous> (/Users/scociancich/Development/Experience/design-system/node_modules/@storybook/addon-storyshots/dist/api/snapshotsTestsTemplate.js:35:33)\n    at Object.asyncJestTest (/Users/scociancich/Development/Experience/design-system/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)\n    at resolve (/Users/scociancich/Development/Experience/design-system/node_modules/jest-jasmine2/build/queueRunner.js:43:12)\n    at new Promise (<anonymous>)\n    at mapper (/Users/scociancich/Development/Experience/design-system/node_modules/jest-jasmine2/build/queueRunner.js:26:19)\n    at promise.then (/Users/scociancich/Development/Experience/design-system/node_modules/jest-jasmine2/build/queueRunner.js:73:41)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:189:7)"
+          ],
+          "fullName": "Storyshots Timeline Short",
+          "location": null,
+          "status": "failed",
+          "title": "Short"
+        }
+      ],
+      "endTime": 1559228480493,
+      "message": "  ● Storyshots › Timeline › Regular\n\n    expect(received).toMatchSnapshot()\n\n    Snapshot name: `Storyshots Timeline Regular 1`\n\n    - Snapshot\n    + Received\n\n    @@ -75,11 +75,11 @@\n                </span>\n                <span\n                  className=\"StyledText-sc-1sadyjn-0 fIdPKo\"\n                  size=\"small\"\n                >\n    -             2019, May 27th\n    +             2019, May 30th\n                </span>\n              </div>\n              <div\n                className=\"StyledBox-sc-13pk1d4-0 dgXxAY\"\n              >\n    @@ -91,11 +91,11 @@\n                </span>\n                <span\n                  className=\"StyledText-sc-1sadyjn-0 fIdPKo\"\n                  size=\"small\"\n                >\n    -             2019, Jun 16th\n    +             2019, Jun 19th\n                </span>\n              </div>\n            </div>\n            <div\n              className=\"StyledBox-sc-13pk1d4-0 ghoNDp\"\n    @@ -110,11 +110,11 @@\n              </span>\n              <span\n                className=\"StyledText-sc-1sadyjn-0 fIdPKo\"\n                size=\"small\"\n              >\n    -           2019, Jul 1st\n    +           2019, Jul 4th\n              </span>\n            </div>\n          </div>\n        </div>\n      </div>\n\n      at match (node_modules/@storybook/addon-storyshots/dist/test-bodies.js:27:20)\n      at node_modules/@storybook/addon-storyshots/dist/test-bodies.js:39:10\n      at Object.<anonymous> (node_modules/@storybook/addon-storyshots/dist/api/snapshotsTestsTemplate.js:35:33)\n\n  ● Storyshots › Timeline › Short\n\n    expect(received).toMatchSnapshot()\n\n    Snapshot name: `Storyshots Timeline Short 1`\n\n    - Snapshot\n    + Received\n\n    @@ -75,11 +75,11 @@\n                </span>\n                <span\n                  className=\"StyledText-sc-1sadyjn-0 fHdEHk\"\n                  size=\"xsmall\"\n                >\n    -             05/27/19\n    +             05/30/19\n                </span>\n              </div>\n              <div\n                className=\"StyledBox-sc-13pk1d4-0 dgXxAY\"\n              >\n    @@ -91,11 +91,11 @@\n                </span>\n                <span\n                  className=\"StyledText-sc-1sadyjn-0 fHdEHk\"\n                  size=\"xsmall\"\n                >\n    -             06/16/19\n    +             06/19/19\n                </span>\n              </div>\n            </div>\n            <div\n              className=\"StyledBox-sc-13pk1d4-0 ghoNDp\"\n    @@ -109,11 +109,11 @@\n              </span>\n              <span\n                className=\"StyledText-sc-1sadyjn-0 fHdEHk\"\n                size=\"xsmall\"\n              >\n    -           07/01/19\n    +           07/04/19\n              </span>\n            </div>\n          </div>\n        </div>\n      </div>\n\n      at match (node_modules/@storybook/addon-storyshots/dist/test-bodies.js:27:20)\n      at node_modules/@storybook/addon-storyshots/dist/test-bodies.js:39:10\n      at Object.<anonymous> (node_modules/@storybook/addon-storyshots/dist/api/snapshotsTestsTemplate.js:35:33)\n",
+      "name": "/Users/scociancich/Development/Experience/design-system/stories/storyshots.test.js",
+      "startTime": 1559228473372,
+      "status": "failed",
+      "summary": ""
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "Storyshots",
+            "Badge"
+          ],
+          "failureMessages": [],
+          "fullName": "Storyshots Badge Simple",
+          "location": null,
+          "status": "passed",
+          "title": "Simple"
+        },
+        {
+          "ancestorTitles": [
+            "Storyshots",
+            "Date & Time"
+          ],
+          "failureMessages": [],
+          "fullName": "Storyshots Date & Time Date Picker",
+          "location": null,
+          "status": "passed",
+          "title": "Date Picker"
+        },
+        {
+          "ancestorTitles": [
+            "Storyshots",
+            "Radio button"
+          ],
+          "failureMessages": [],
+          "fullName": "Storyshots Radio button Simple",
+          "location": null,
+          "status": "passed",
+          "title": "Simple"
+        },
+        {
+          "ancestorTitles": [
+            "Storyshots",
+            "Timeline"
+          ],
+          "failureMessages": [
+            "Error: expect(received).toMatchSnapshot()\n\nSnapshot name: `Storyshots Timeline Regular 1`\n\n- Snapshot\n+ Received\n\n@@ -75,11 +75,11 @@\n            </span>\n            <span\n              className=\"StyledText-sc-1sadyjn-0 fIdPKo\"\n              size=\"small\"\n            >\n-             2019, May 27th\n+             2019, May 30th\n            </span>\n          </div>\n          <div\n            className=\"StyledBox-sc-13pk1d4-0 dgXxAY\"\n          >\n@@ -91,11 +91,11 @@\n            </span>\n            <span\n              className=\"StyledText-sc-1sadyjn-0 fIdPKo\"\n              size=\"small\"\n            >\n-             2019, Jun 16th\n+             2019, Jun 19th\n            </span>\n          </div>\n        </div>\n        <div\n          className=\"StyledBox-sc-13pk1d4-0 ghoNDp\"\n@@ -110,11 +110,11 @@\n          </span>\n          <span\n            className=\"StyledText-sc-1sadyjn-0 fIdPKo\"\n            size=\"small\"\n          >\n-           2019, Jul 1st\n+           2019, Jul 4th\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n    at match (/Users/scociancich/Development/Experience/design-system/node_modules/@storybook/addon-storyshots/dist/test-bodies.js:27:20)\n    at /Users/scociancich/Development/Experience/design-system/node_modules/@storybook/addon-storyshots/dist/test-bodies.js:39:10\n    at Object.<anonymous> (/Users/scociancich/Development/Experience/design-system/node_modules/@storybook/addon-storyshots/dist/api/snapshotsTestsTemplate.js:35:33)\n    at Object.asyncJestTest (/Users/scociancich/Development/Experience/design-system/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)\n    at resolve (/Users/scociancich/Development/Experience/design-system/node_modules/jest-jasmine2/build/queueRunner.js:43:12)\n    at new Promise (<anonymous>)\n    at mapper (/Users/scociancich/Development/Experience/design-system/node_modules/jest-jasmine2/build/queueRunner.js:26:19)\n    at promise.then (/Users/scociancich/Development/Experience/design-system/node_modules/jest-jasmine2/build/queueRunner.js:73:41)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:189:7)"
+          ],
+          "fullName": "Storyshots Timeline Regular",
+          "location": null,
+          "status": "failed",
+          "title": "Regular"
+        },
+        {
+          "ancestorTitles": [
+            "Storyshots",
+            "Timeline"
+          ],
+          "failureMessages": [
+            "Error: expect(received).toMatchSnapshot()\n\nSnapshot name: `Storyshots Timeline Short 1`\n\n- Snapshot\n+ Received\n\n@@ -75,11 +75,11 @@\n            </span>\n            <span\n              className=\"StyledText-sc-1sadyjn-0 fHdEHk\"\n              size=\"xsmall\"\n            >\n-             05/27/19\n+             05/30/19\n            </span>\n          </div>\n          <div\n            className=\"StyledBox-sc-13pk1d4-0 dgXxAY\"\n          >\n@@ -91,11 +91,11 @@\n            </span>\n            <span\n              className=\"StyledText-sc-1sadyjn-0 fHdEHk\"\n              size=\"xsmall\"\n            >\n-             06/16/19\n+             06/19/19\n            </span>\n          </div>\n        </div>\n        <div\n          className=\"StyledBox-sc-13pk1d4-0 ghoNDp\"\n@@ -109,11 +109,11 @@\n          </span>\n          <span\n            className=\"StyledText-sc-1sadyjn-0 fHdEHk\"\n            size=\"xsmall\"\n          >\n-           07/01/19\n+           07/04/19\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n    at match (/Users/scociancich/Development/Experience/design-system/node_modules/@storybook/addon-storyshots/dist/test-bodies.js:27:20)\n    at /Users/scociancich/Development/Experience/design-system/node_modules/@storybook/addon-storyshots/dist/test-bodies.js:39:10\n    at Object.<anonymous> (/Users/scociancich/Development/Experience/design-system/node_modules/@storybook/addon-storyshots/dist/api/snapshotsTestsTemplate.js:35:33)\n    at Object.asyncJestTest (/Users/scociancich/Development/Experience/design-system/node_modules/jest-jasmine2/build/jasmineAsyncInstall.js:102:37)\n    at resolve (/Users/scociancich/Development/Experience/design-system/node_modules/jest-jasmine2/build/queueRunner.js:43:12)\n    at new Promise (<anonymous>)\n    at mapper (/Users/scociancich/Development/Experience/design-system/node_modules/jest-jasmine2/build/queueRunner.js:26:19)\n    at promise.then (/Users/scociancich/Development/Experience/design-system/node_modules/jest-jasmine2/build/queueRunner.js:73:41)\n    at <anonymous>\n    at process._tickCallback (internal/process/next_tick.js:189:7)"
+          ],
+          "fullName": "Storyshots Timeline Short",
+          "location": null,
+          "status": "failed",
+          "title": "Short"
+        }
+      ],
+      "endTime": 1559228480493,
+      "message": "  ● Storyshots › Timeline › Regular\n\n    expect(received).toMatchSnapshot()\n\n    Snapshot name: `Storyshots Timeline Regular 1`\n\n    - Snapshot\n    + Received\n\n    @@ -75,11 +75,11 @@\n                </span>\n                <span\n                  className=\"StyledText-sc-1sadyjn-0 fIdPKo\"\n                  size=\"small\"\n                >\n    -             2019, May 27th\n    +             2019, May 30th\n                </span>\n              </div>\n              <div\n                className=\"StyledBox-sc-13pk1d4-0 dgXxAY\"\n              >\n    @@ -91,11 +91,11 @@\n                </span>\n                <span\n                  className=\"StyledText-sc-1sadyjn-0 fIdPKo\"\n                  size=\"small\"\n                >\n    -             2019, Jun 16th\n    +             2019, Jun 19th\n                </span>\n              </div>\n            </div>\n            <div\n              className=\"StyledBox-sc-13pk1d4-0 ghoNDp\"\n    @@ -110,11 +110,11 @@\n              </span>\n              <span\n                className=\"StyledText-sc-1sadyjn-0 fIdPKo\"\n                size=\"small\"\n              >\n    -           2019, Jul 1st\n    +           2019, Jul 4th\n              </span>\n            </div>\n          </div>\n        </div>\n      </div>\n\n      at match (node_modules/@storybook/addon-storyshots/dist/test-bodies.js:27:20)\n      at node_modules/@storybook/addon-storyshots/dist/test-bodies.js:39:10\n      at Object.<anonymous> (node_modules/@storybook/addon-storyshots/dist/api/snapshotsTestsTemplate.js:35:33)\n\n  ● Storyshots › Timeline › Short\n\n    expect(received).toMatchSnapshot()\n\n    Snapshot name: `Storyshots Timeline Short 1`\n\n    - Snapshot\n    + Received\n\n    @@ -75,11 +75,11 @@\n                </span>\n                <span\n                  className=\"StyledText-sc-1sadyjn-0 fHdEHk\"\n                  size=\"xsmall\"\n                >\n    -             05/27/19\n    +             05/30/19\n                </span>\n              </div>\n              <div\n                className=\"StyledBox-sc-13pk1d4-0 dgXxAY\"\n              >\n    @@ -91,11 +91,11 @@\n                </span>\n                <span\n                  className=\"StyledText-sc-1sadyjn-0 fHdEHk\"\n                  size=\"xsmall\"\n                >\n    -             06/16/19\n    +             06/19/19\n                </span>\n              </div>\n            </div>\n            <div\n              className=\"StyledBox-sc-13pk1d4-0 ghoNDp\"\n    @@ -109,11 +109,11 @@\n              </span>\n              <span\n                className=\"StyledText-sc-1sadyjn-0 fHdEHk\"\n                size=\"xsmall\"\n              >\n    -           07/01/19\n    +           07/04/19\n              </span>\n            </div>\n          </div>\n        </div>\n      </div>\n\n      at match (node_modules/@storybook/addon-storyshots/dist/test-bodies.js:27:20)\n      at node_modules/@storybook/addon-storyshots/dist/test-bodies.js:39:10\n      at Object.<anonymous> (node_modules/@storybook/addon-storyshots/dist/api/snapshotsTestsTemplate.js:35:33)\n",
+      "name": "/Users/scociancich/Development/Experience/design-system/stories/storyshots.test.js",
+      "startTime": 1559228473372,
+      "status": "failed",
+      "summary": ""
+    }
+  ],
+  "wasInterrupted": false
+}

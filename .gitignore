@@ -1,0 +1,5 @@
+/example/
+node_modules/
+/storybook/
+.prettierrc
+yarn-error.log
