@@ -9,7 +9,9 @@
   },
   "scripts": {
     "test": "jest src",
-    "build": "babel src/storybook --out-dir storybook --extensions '.js,.jsx' --ignore '**/*.spec.js'"
+    "build": "yarn build:storybook && yarn build:webpack",
+    "build:storybook": "babel src/storybook --out-dir storybook --extensions '.js,.jsx' --ignore '**/*.spec.js'",
+    "build:webpack": "babel src/webpack --out-dir webpack --extensions '.js,.jsx' --ignore '**/*.spec.js'"
   },
   "jest": {
     "transform": {
@@ -18,7 +20,8 @@
   },
   "dependencies": {
     "@storybook/addons": "^5.1.3",
-    "@storybook/core-events": "^5.1.3"
+    "@storybook/core-events": "^5.1.3",
+    "tmp": "^0.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
