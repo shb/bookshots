@@ -1,7 +1,7 @@
 import JestReport from './JestReport';
 import StaticReportProvider from './providers/static';
 
-describe("JestReport", () => {
+xdescribe("JestReport", () => {
 
   let provider
   let report
