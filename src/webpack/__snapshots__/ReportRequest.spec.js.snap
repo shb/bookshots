@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RequestReport waitForReport only resolves to an updated report once 1`] = `[Error: Timeout]`;
+
+exports[`RequestReport waitForReport reject/throws after waiting for too long 1`] = `[Error: Timeout]`;
