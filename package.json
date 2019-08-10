@@ -43,5 +43,9 @@
   },
   "peerDependencies": {
     "react": "^16.8.6"
-  }
+  },
+  "files": [
+    "storybook",
+    "webpack"
+  ]
 }
