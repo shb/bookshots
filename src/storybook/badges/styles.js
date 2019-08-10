@@ -12,8 +12,8 @@ export const badge = (b = {}) => ` {
     font-weight: bold;
     color: white;
     line-height: 1;
-    position: absolute;
-    right: 0;
+    /* position: absolute; */
+    right: 2em;
 }`
 
 export const bullet = (b = {}) => `{
@@ -25,6 +25,6 @@ export const bullet = (b = {}) => `{
     border-radius: 1em;
     font-size: 85%;
     margin: 0 1ex;
-    position: absolute;
-    right: 0;
+    /* position: absolute; */
+    right: 2em;
 }`

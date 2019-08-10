@@ -24,6 +24,10 @@ export default class RemoteReportProvider
       if (this.onError) {
         this.onError(err)
       }
+    } finally {
+      setTimeout(() => {
+        this.request()
+      }, 1)
     }
   }
 }

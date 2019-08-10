@@ -10,29 +10,41 @@ import providers from './providers'
 
 export default function (options) {
   const provider = initProvider(options)
-  const report = new JestReport(provider)
 
-  addons.register('shb/storybook-storyshots', createAddon(report));
+  addons.register('shb/storybook-storyshots', createAddon(provider));
 }
 
 function initProvider (options) {
-  const providerCtor = providers[options.provider.type]
+  const Provider = providers[options.provider.type]
   const providerOptions = options.provider.options
-  return new providerCtor(providerOptions)
+  return new Provider(providerOptions)
 }
 
-const createAddon = report => function storyshotsAddon(api) {
+const createAddon = provider => function storyshotsAddon(api)
+{
+  let report
+  let stories
 
-  const deco = new StoryDecorator(report)
+  api.on(SET_STORIES, event => {
+    stories = event.stories
+    updateUi()
+  })
 
-  api.on(SET_STORIES, ({stories}) => {
+  provider.onNewReport = () => {
+    report = new JestReport(provider)
+    updateUi()
+  }
+
+  function updateUi () {
+    if (!stories) return
+    if (!report) return
     report.load()
-    deco.reset(report)
+    const deco = new StoryDecorator(report)
     Object.values(stories).forEach(story => {
       deco.addStoryBadges(story)
     })
     deco.setBadges()
-  })
+  }
 
   addons.add('shb/storybook-storyshots/panel', {
     type: types.PANEL,
@@ -46,8 +58,10 @@ const createAddon = report => function storyshotsAddon(api) {
     },
   })
 
-  const getFailed = story => report.queryAssertions()
-    .filterStory(story)
-    .filterFailed()
-    .getResults()
+  const getFailed = story => report
+    ? report.queryAssertions()
+      .filterStory(story)
+      .filterFailed()
+      .getResults()
+    : []
 }
