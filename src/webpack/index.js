@@ -1,48 +1,40 @@
-const { Server } = require('http')
-
+const BookshotsServer = require('./BookshotsServer');
 const TestSuite = require('./TestSuite')
-
-const REQUEST_TIMEOUT = 60000
+const ReportRequest = require('./ReportRequest')
 
 module.exports = class BookShotsWebpackPlugin {
   constructor(options) {
-    console.log("Initializing BookShots webpack plugin", options)
+    console.log("[BookShort] Initializing BookShots webpack plugin", options)
 
+    this._testSuite = new TestSuite
+    this._reportRequest = new ReportRequest
+  
     Object.assign(this, {
       port: 8888
     }, options)
-
-    this._testSuite = new TestSuite
-
-    this.server = new Server
-    this.server.on('request', (req, res) => this.handleRequest(req, res))
-  }
-
-  handleRequest(req, res) {
-    req.start = req.start || Date.now()
-
-    if (this.reportStream) {
-      res.statusCode = 200
-      this.reportStream.pipe(res)
-      delete this.reportStream
-    } else {
-      if (Date.now() - req.start > REQUEST_TIMEOUT) {
-        res.statusCode = 204
-        res.end()
-        return
-      } else {
-        setImmediate(() => { this.handleRequest(req, res) })
-      }
-    }
   }
 
   apply(compiler) {
-    this.server.listen(this.port)
+    this.startServer()
 
-    compiler.hooks.watchRun.tapPromise('BookShots', async compiler => {
-      this._testSuite.run().then(report => {
-        this.reportStream = report.getReadStream()
-      })
+    compiler.hooks.watchRun.tapPromise('BookShots', async () => {
+      this.updateReport()
+    })
+  }
+
+  startServer () {
+    this.server = new BookshotsServer({
+      port: this.port,
+      requestHandler: this._reportRequest
+    })
+    this.server.start()
+  }
+
+  updateReport () {
+    console.info("[Bookshots] Updating StoryShots results in the background...")
+    return this._testSuite.run().then(report => {
+      console.info("[Bookshots] Updating report")
+      this._reportRequest.updateReport(report.getReadStream())
     })
   }
 }
