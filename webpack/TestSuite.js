@@ -18,7 +18,6 @@ module.exports = class TestSuite {
   }
 
   run() {
-    console.info("[Bookshots] Updating StoryShots results in background...");
     return new Promise((resolve, reject) => {
       tmp.file(async (err, path, fd, clean) => {
         if (err) {
@@ -33,7 +32,16 @@ module.exports = class TestSuite {
         }); // Run test command with additional params
 
 
-        await this._packageManager.run('test', testParams);
+        this._packageManager.setEnv({
+          NODE_ENV: 'test'
+        });
+
+        try {
+          await this._packageManager.run('test', testParams);
+        } catch (e) {
+          //console.log(e)
+        }
+
         resolve(this);
       });
     });
