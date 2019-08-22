@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Decoration badge 1`] = `
+"{
+    display: inline-block;
+    content: \\"content\\";
+    background: red;
+    min-width: 1em;
+    border-radius: 10em;
+    vertical-align: baseline;
+    padding: 2px 1ex 1px;
+    font-size: 85%;
+    margin: 0 1ex;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    line-height: 1;
+    /* position: absolute; */
+    right: 2em;
+}"
+`;
+
+exports[`Decoration bullet 1`] = `
+"{
+    display: inline-block;
+    content: \\"\\";
+    background: red;
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+    font-size: 85%;
+    margin: 0 1ex;
+    /* position: absolute; */
+    right: 2em;
+}"
+`;

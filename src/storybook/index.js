@@ -3,15 +3,18 @@ import addons, { types } from '@storybook/addons'
 import { SET_STORIES } from '@storybook/core-events'
 
 import JestReport from './JestReport'
-import StoryDecorator from './StoriesDecorator';
-import StoryshotPanel from './components/StoryshotsPanel';
-import StoryshotStatus from './components/StoryshotStatus';
+import StoryshotPanel from './components/StoryshotsPanel'
+import StoryshotTab from './components/StoryshotStatus'
 import providers from './providers'
+
+import { addStylesheet } from './cssomHelper'
+import CssRuleMapper from './decorator/CssRuleMapper'
+import Decorator from './decorator/Decorator'
 
 export default function (options) {
   const provider = initProvider(options)
 
-  addons.register('shb/storybook-storyshots', createAddon(provider));
+  addons.register('shb/storybook-storyshots', createAddon(provider))
 }
 
 function initProvider (options) {
@@ -24,6 +27,14 @@ const createAddon = provider => function storyshotsAddon(api)
 {
   let report
   let stories
+
+  const stylesheet = addStylesheet("bookshots")
+  const cssMapper = new CssRuleMapper({
+    stylesheet
+  })
+  const deco = new Decorator({
+    mapper: cssMapper
+  })
 
   api.on(SET_STORIES, event => {
     stories = event.stories
@@ -39,18 +50,20 @@ const createAddon = provider => function storyshotsAddon(api)
     if (!stories) return
     if (!report) return
     report.load()
-    const deco = new StoryDecorator(report)
     Object.values(stories).forEach(story => {
-      deco.addStoryBadges(story)
+      if (getFailed(story).length) {
+        deco.flagStory(story)
+      } else {
+        deco.unflagStory(story)
+      }
     })
-    deco.setBadges()
   }
 
   addons.add('shb/storybook-storyshots/panel', {
     type: types.PANEL,
     title: () => {
       const story = api.getCurrentStoryData()
-      return story ? <StoryshotStatus results={getFailed(story)}>Storyshots</StoryshotStatus> : null
+      return story ? <StoryshotTab results={getFailed(story)}>Storyshots</StoryshotTab> : null
     },
     render: ({ active }) => {
       const story = api.getCurrentStoryData()

@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Decorator flag two sibling stories 1`] = `
+"#button--simple:after {
+    display: inline-block;
+    content: \\"\\";
+    background: red;
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+    font-size: 85%;
+    margin: 0 1ex;
+    /* position: absolute; */
+    right: 2em;
+}
+#button:after {
+    display: inline-block;
+    content: \\"2\\";
+    background: red;
+    min-width: 1em;
+    border-radius: 10em;
+    vertical-align: baseline;
+    padding: 2px 1ex 1px;
+    font-size: 85%;
+    margin: 0 1ex;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    line-height: 1;
+    /* position: absolute; */
+    right: 2em;
+}
+#button--not-so-simple:after {
+    display: inline-block;
+    content: \\"\\";
+    background: red;
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+    font-size: 85%;
+    margin: 0 1ex;
+    /* position: absolute; */
+    right: 2em;
+}"
+`;
+
+exports[`Decorator flagging one story 1`] = `
+"#button--simple:after {
+    display: inline-block;
+    content: \\"\\";
+    background: red;
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+    font-size: 85%;
+    margin: 0 1ex;
+    /* position: absolute; */
+    right: 2em;
+}
+#button:after {
+    display: inline-block;
+    content: \\"1\\";
+    background: red;
+    min-width: 1em;
+    border-radius: 10em;
+    vertical-align: baseline;
+    padding: 2px 1ex 1px;
+    font-size: 85%;
+    margin: 0 1ex;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    line-height: 1;
+    /* position: absolute; */
+    right: 2em;
+}"
+`;
+
+exports[`Decorator unflagging a story 1`] = `""`;
+
+exports[`Decorator unflagging one of two sibling flagged stories 1`] = `
+"#button:after {
+    display: inline-block;
+    content: \\"1\\";
+    background: red;
+    min-width: 1em;
+    border-radius: 10em;
+    vertical-align: baseline;
+    padding: 2px 1ex 1px;
+    font-size: 85%;
+    margin: 0 1ex;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    line-height: 1;
+    /* position: absolute; */
+    right: 2em;
+}
+#button--not-so-simple:after {
+    display: inline-block;
+    content: \\"\\";
+    background: red;
+    width: 1em;
+    height: 1em;
+    border-radius: 1em;
+    font-size: 85%;
+    margin: 0 1ex;
+    /* position: absolute; */
+    right: 2em;
+}"
+`;
