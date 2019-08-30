@@ -1,8 +1,7 @@
 {
   "name": "bookshots",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
-  "private": true,
   "author": {
     "name": "Simone Cociancich",
     "email": "simone.cociancich@gmail.com",
