@@ -1,5 +1,5 @@
 {
-  "name": "bookshots",
+  "name": "@shb/bookshots",
   "version": "0.0.3",
   "license": "MIT",
   "author": {
@@ -25,6 +25,8 @@
   "dependencies": {
     "@storybook/addons": "^5.1.3",
     "@storybook/core-events": "^5.1.10",
+    "core-js": "^3.17.2",
+    "regenerator-runtime": "^0.13.9",
     "tmp": "^0.1.0"
   },
   "devDependencies": {
@@ -47,5 +49,8 @@
   "files": [
     "storybook",
     "webpack"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
